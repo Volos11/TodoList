@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_layout"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/data"
+        style="@style/Clickable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="15dp"
+        android:fontFamily="@font/exo2light"
+        android:text="20.01.2024"
+        android:visibility="visible"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tag"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/title"
+        style="@style/Text.LiteTracker.Gray.LightFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:hint="Новая задача"
+        android:textColorHint="@color/gray_white_2"
+        android:visibility="visible"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/disc"
+        style="@style/Text.LiteTracker.Gray.LightFont"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="18sp"
+        android:paddingVertical="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:backgroundTint="@color/black"
+        android:inputType="textMultiLine"
+        android:importantForAutofill="no"
+        android:gravity="start"
+        android:hint="Описание"
+        android:textColorHint="@color/gray_white_2"
+        android:visibility="visible"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tag"
+        style="@style/Clickable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_c"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@id/data"
+        app:layout_constraintStart_toEndOf="@id/data"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tag_text"
+            style="@style/Text.LiteTracker.Gray.MediumFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_white_1"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:text="Без тега"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxLength="15"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

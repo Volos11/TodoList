@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/header_title"
+        style="@style/Text.LiteTracker.Gray.LightFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_title"
+        android:layout_weight="1"
+        app:layout_constraintHorizontal_weight="80"
+        android:textSize="33sp"
+        android:layout_gravity="center"
+        android:paddingVertical="10dp"
+        android:textColor="@color/white"
+        android:paddingStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/header_button_action"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/settings"
+        style="@style/Clickable"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:layout_gravity="center"
+        android:src="@drawable/baseline_settings_24"
+        app:layout_constraintHorizontal_weight="20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/header_title"
+        app:layout_constraintBottom_toBottomOf="@id/header_title"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/header_button_action"
+        style="@style/Clickable"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintHorizontal_weight="20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/header_title"
+        app:layout_constraintBottom_toBottomOf="@id/header_title"/>
+
+
+
+</LinearLayout>

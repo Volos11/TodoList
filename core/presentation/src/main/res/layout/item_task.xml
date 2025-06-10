@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraint"
+    style="@style/Clickable"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="8dp"
+    android:backgroundTint="@color/gray_dark_4"
+    android:background="@drawable/rounded">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/data"
+        style="@style/Text.LiteTracker.Gray.MediumFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="20.12.2024"
+        android:gravity="start"
+        android:paddingHorizontal="20dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonIconTint="@color/black"
+        app:buttonTint="@color/white"
+        android:checked="true"
+        app:layout_constraintTop_toBottomOf="@id/data"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        style="@style/Text.LiteTracker.Gray.MediumFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="Titlesdfsdfsfsfsdfsdfsdfsdfsdsdfsfsdfsdsdfsfsdfsff"
+        android:gravity="start"
+        android:paddingEnd="15dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+
+        app:layout_constraintTop_toTopOf="@id/check"
+        app:layout_constraintStart_toEndOf="@id/check"
+        app:layout_constraintBottom_toBottomOf="@id/check"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text"
+        style="@style/Text.LiteTracker.Gray.LightFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="sffffdsdfsfsdfsfsf dfgfg fgdffd dfgddg dfgdfgdfg dfgdg"
+        android:gravity="start"
+        android:ellipsize="end"
+        android:paddingEnd="15dp"
+        android:paddingTop="5dp"
+        android:maxLines="4"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_c"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tag_text"
+            style="@style/Text.LiteTracker.Gray.MediumFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_white_1"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:text="Университет"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxLength="15"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

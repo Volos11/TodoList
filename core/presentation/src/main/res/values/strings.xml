@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LiteTracker</string>
+    <string name="default_title">title</string>
+    <string name="title_on_today">На сегодня</string>
+    <string name="no_task">Нет задач</string>
+    <string name="create">Создать</string>
+    <string name="add">Добавить</string>
+    <string name="title_tasks">Задачи</string>
+    <string name="delete_text">Удалить</string>
+    <string name="check_text">Отметить</string>
+
+    <string name="chanel_name">potok</string>
+</resources>
